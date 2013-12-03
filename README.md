@@ -1,7 +1,7 @@
 threex.objcoord
 ===============
 
-threex.objcoord is a three.js module which does the coordinates conversion for you.
+threex.objcoord is a three.js module to help compute the object position in the various coordinates space.
 You can get ```.worldPosition``` of 3d objects, their ```.screenPosition``` or even
 their ```.cssPosition```! So you can put any domelement on a 3d object and have it
 follow it. Like a name for your avatars. 
