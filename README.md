@@ -82,6 +82,12 @@ element.style.left	= (position.x-element.offsetWidth /2)+'px';
 element.style.top	= (position.y-element.offsetHeight/2)+'px';
 ```
 
+Possible Improvements
+=====================
+* add a better demo
+  * maybe many minecraft with some news on top
+  * put a widget with link to show html
+  * put a widget with round border too
 
 
 
