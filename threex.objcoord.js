@@ -48,8 +48,8 @@ THREEx.ObjCoord.screenPosition	= function(object3d, camera){
  */
 THREEx.ObjCoord.cssPosition	= function(object3d, camera, renderer){
 	var position	= this.screenPosition(object3d, camera);
-	position.x	= (  (position.x/2 + 0.5)) * renderer.domElement.width;
-	position.y	= (1-(position.y/2 + 0.5)) * renderer.domElement.height;
+	position.x	= (  (position.x/2 + 0.5)) * renderer.domElement.width / renderer.devicePixelRatio;
+	position.y	= (1-(position.y/2 + 0.5)) * renderer.domElement.height/ renderer.devicePixelRatio;
 	return position;
 }
 

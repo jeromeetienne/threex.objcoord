@@ -70,7 +70,7 @@ Note the 'position: absolute;'
 ```
 var element	= document.createElement('div')
 document.body.appendChild(element)
-element.innerHTML	= 'threex';	
+element.innerHTML	= 'threex';
 element.style.position	= 'absolute'
 ```
 
