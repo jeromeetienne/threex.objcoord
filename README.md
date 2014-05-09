@@ -1,10 +1,7 @@
 threex.objcoord
 ===============
-
-threex.objcoord is a three.js module to help compute the object position in the various coordinates space.
-You can get ```.worldPosition``` of 3d objects, their ```.screenPosition``` or even
-their ```.cssPosition```! So you can put any domelement on a 3d object and have it
-follow it. Like a name for your avatars. 
+ 
+threex.objcoord  is a [threex game extension for three.js](http://jeromeetienne.github.io/threex/) which helps compute the object position in the various coordinates space. You can get ```.worldPosition``` of 3d objects, their ```.screenPosition``` or even their ```.cssPosition```! So you can put any domElement on a 3d object and have it follow it. Like a name for your avatars. For example you can use it when you wanna display widgets or links on top of the characters in your game. 
 
 Show Don't Tell
 ===============
