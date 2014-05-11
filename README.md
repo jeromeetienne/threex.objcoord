@@ -9,6 +9,11 @@ Show Don't Tell
 \[[view source](https://github.com/jeromeetienne/threex.objcoord/blob/master/examples/basic.html)\] :
 It shows the basic of the module. Likely the first thing to look at.
 
+
+A Screenshot
+============
+[![screenshot](https://raw.githubusercontent.com/jeromeetienne/threex.objcoord/master/examples/images/screenshot-threex-objcoord-512x512.jpg)](http://jeromeetienne.github.io/threex.objcoord/examples/basic.html)
+
 How To Install It
 =================
 
