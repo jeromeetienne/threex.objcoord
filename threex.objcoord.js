@@ -68,3 +68,45 @@ THREEx.ObjCoord.convertWorldToScreenSpace	= function(worldPosition, camera){
 	var screenPos	= projector.projectVector(worldPosition.clone(), camera );
 	return screenPos;
 }
+
+//////////////////////////////////////////////////////////////////////////////////
+//		Comment								//
+//////////////////////////////////////////////////////////////////////////////////
+
+/** 
+ * return the visible height *in 3d* of the plane facing the camera.
+ * from http://stackoverflow.com/questions/13350875/three-js-width-of-view
+ * 
+ * @param {THREE.Camera} camera         current camera
+ * @param {Number} distanceToCamera 	distance from the object to the camera
+ */
+THREEx.ObjCoord.VisiblePlaneHeight	= function(camera, distanceToCamera){
+	var vFOV	= camera.fov * Math.PI / 180;		// convert vertical fov to radians
+	var planeHeight	= 2 * Math.tan( vFOV / 2 ) * distanceToCamera;	// visible height
+	return planeHeight
+}
+
+
+
+/** 
+ * return the visible width *in 3d* of the plane facing the camera. 
+ * It needs the renderer to get screen aspect.
+ * from http://stackoverflow.com/questions/13350875/three-js-width-of-view
+ * 
+ * @param {THREE.Camera} camera         current camera
+ * @param {THREE.Renderer} renderer     current renderer (to get screen aspect)
+ * @param {Number} distanceToCamera 	distance from the object to the camera
+ */
+THREEx.ObjCoord.VisiblePlaneWidth	= function(camera, renderer, distanceToCamera){
+	var planeHeight	= THREEx.ObjCoord.VisiblePlaneHeight(camera, distanceToCamera)
+	var aspect	= renderer.domElement.width / renderer.domElement.height;
+	var planeWidth	= planeHeight * aspect; 
+	return planeWidth
+}
+
+
+
+
+
+
+

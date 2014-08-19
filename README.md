@@ -84,6 +84,16 @@ element.style.left	= (position.x-element.offsetWidth /2)+'px';
 element.style.top	= (position.y-element.offsetHeight/2)+'px';
 ```
 
+### THREEx.ObjCoord.VisiblePlaneHeight(camera, distanceToCamera)
+
+It returns the visible height *in 3d* of the plane facing the camera.
+See details in [three.js width of view](http://stackoverflow.com/questions/13350875/three-js-width-of-view)
+
+### THREEx.ObjCoord.VisiblePlaneWidth(camera, renderer, distanceToCamera)
+It returns the visible width *in 3d* of the plane facing the camera.
+It needs the renderer to get screen aspect.
+See details in [three.js width of view](http://stackoverflow.com/questions/13350875/three-js-width-of-view)
+
 Possible Improvements
 =====================
 * add a better demo
