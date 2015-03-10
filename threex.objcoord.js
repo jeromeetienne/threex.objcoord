@@ -21,7 +21,7 @@ THREEx.ObjCoord	= function(object3d){
 THREEx.ObjCoord.worldPosition	= function(object3d){
 	object3d.updateMatrixWorld();
 	var worldMatrix	= object3d.matrixWorld;
-	var worldPos	= new THREE.Vector3().getPositionFromMatrix(worldMatrix);
+	var worldPos	= new THREE.Vector3().setFromMatrixPosition(worldMatrix);
 	return worldPos;
 }
 
@@ -48,8 +48,8 @@ THREEx.ObjCoord.screenPosition	= function(object3d, camera){
  */
 THREEx.ObjCoord.cssPosition	= function(object3d, camera, renderer){
 	var position	= this.screenPosition(object3d, camera);
-	position.x	= (  (position.x/2 + 0.5)) * renderer.domElement.width / renderer.devicePixelRatio;
-	position.y	= (1-(position.y/2 + 0.5)) * renderer.domElement.height/ renderer.devicePixelRatio;
+	position.x	= (  (position.x/2 + 0.5)) * renderer.domElement.width / renderer.getPixelRatio();
+	position.y	= (1-(position.y/2 + 0.5)) * renderer.domElement.height/ renderer.getPixelRatio();
 	return position;
 }
 
@@ -63,9 +63,11 @@ THREEx.ObjCoord.cssPosition	= function(object3d, camera, renderer){
  * @return {THREE.Vector3}			the screen space position [-1, +1]
  */
 THREEx.ObjCoord.convertWorldToScreenSpace	= function(worldPosition, camera){
+	// init projector if needed 
 	var projector	= this.projector || new THREE.Projector();
 	this.projector	= projector
-	var screenPos	= projector.projectVector(worldPosition.clone(), camera );
+	// compute screenPos
+	var screenPos	= worldPosition.clone().project( camera );
 	return screenPos;
 }
 
@@ -101,10 +103,3 @@ THREEx.ObjCoord.VisiblePlaneWidth	= function(camera, renderer, distanceToCamera)
 	var planeWidth	= planeHeight * aspect; 
 	return planeWidth
 }
-
-
-
-
-
-
-
