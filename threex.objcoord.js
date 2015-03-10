@@ -27,7 +27,7 @@ THREEx.ObjCoord.worldPosition	= function(object3d){
 
 /**
  * get screen position
- * 
+ *
  * @param  {THREE.Object3D} object3d	the object3damera used to render
  * @param  {THREE.Camera} camera	the camera used to render
  * @return {THREE.Vector3}			the screen position
@@ -40,7 +40,7 @@ THREEx.ObjCoord.screenPosition	= function(object3d, camera){
 
 /**
  * get css position
- * 
+ *
  * @param  {THREE.Object3D} object3d	the object3damera used to render
  * @param  {THREE.Renderer} renderer	the renderer used to render
  * @param  {THREE.Camera} camera	the camera used to render
@@ -57,7 +57,7 @@ THREEx.ObjCoord.cssPosition	= function(object3d, camera, renderer){
 
 /**
  * convert world position to screen space
- * 
+ *
  * @param  {THREE.Vector3}	worldPosition	the world position
  * @param  {THREE.Camera}	tCamera       	the camera used to render
  * @return {THREE.Vector3}			the screen space position [-1, +1]
