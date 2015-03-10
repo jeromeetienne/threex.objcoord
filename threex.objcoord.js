@@ -86,8 +86,6 @@ THREEx.ObjCoord.VisiblePlaneHeight	= function(camera, distanceToCamera){
 	return planeHeight
 }
 
-
-
 /** 
  * return the visible width *in 3d* of the plane facing the camera. 
  * It needs the renderer to get screen aspect.
